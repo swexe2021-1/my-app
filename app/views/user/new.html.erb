@@ -1,9 +1,0 @@
-<%= form_for @user , url: {action: :create} do |f| %>
-  <p><%= f.label :uid, 'ID' %>
-  <%= f.text_field :uid %></p>
-　<p><%= f.label :pass, 'パスワード' %>
-  <%= f.text_field :pass %></p>
-  <p><%= f.label :pass_confirmation, 'パスワード（確認）' %>
-  <%= f.password_field :pass_confirmation %></p>
-  <%= f.submit '登録' %>
-<% end %>

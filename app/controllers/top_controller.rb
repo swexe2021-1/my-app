@@ -1,18 +1,16 @@
 class TopController < ApplicationController
     def main
-        if session[:login_uid]
-            render 'main'
-        else
-            render 'login'
-        end
+        render 'login'
     end
     
     def login
         user = User.find_by(uid: params[:uid])
         if user and BCrypt::Password.new(user.pass) == params[:pass]
+           flash[:notice] = 'ログインしました'
            session[:login_uid] = params[:uid]
-           render 'main'
+           redirect_to root_path
         else
+            flash[:notice] = 'ログインエラー'
             render 'login_failed'
         end
     end

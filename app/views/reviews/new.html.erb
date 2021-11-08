@@ -1,0 +1,17 @@
+<%= form_for @review, url: {action: :create} do |f| %>
+  <%= f.label :star, '評価' %> 
+  <%= f.number_field :star %> 
+  <%= f.label :description, '詳細' %> 
+  <%= f.text_field :description %> 
+  <%= f.label :prefecture, '県' %> 
+  <%= f.text_field :prefecture %> 
+  <%= f.label :city, '市' %> 
+  <%= f.text_field :city %> 
+  <%= f.label :district, '区町村' %> 
+  <%= f.text_field :district %> 
+  <%= f.label :building, '建物名' %> 
+  <%= f.text_field :building %> 
+  <%= f.label :number, '号室' %> 
+  <%= f.text_field :number %> 
+  <%= f.submit 'レビューする' %>
+<% end %>

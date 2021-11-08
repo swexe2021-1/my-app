@@ -1,6 +1,7 @@
 class User < ApplicationRecord
     validates :uid, uniqueness: true
     validates :password, presence: true, confirmation: true
+    has_many :reviews, dependent: :destroy
     
     attr_accessor :password, :password_confirmation
 

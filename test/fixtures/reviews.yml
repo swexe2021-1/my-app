@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  star: 1
+  description: MyString
+  user_id: 1
+  tdate: 2021-11-08 07:57:01
+  prefecture: MyString
+  city: MyString
+  district: MyString
+  building: MyString
+  number: MyString
+
+two:
+  star: 1
+  description: MyString
+  user_id: 1
+  tdate: 2021-11-08 07:57:01
+  prefecture: MyString
+  city: MyString
+  district: MyString
+  building: MyString
+  number: MyString
