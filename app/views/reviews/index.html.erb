@@ -3,15 +3,3 @@
   <%= link_to 'レビューする', new_review_path %>
 <% end %>
 </p>
-
-<p>
-<% if current_user %>
-  <%= link_to 'ログアウト', top_logout_path %>
-<% else %>
-  <%= link_to 'ログイン', top_main_path %>
-<% end %>
-</p>
-
-<p>
-  <%= link_to 'ユーザー一覧', users_path %>
-</p>

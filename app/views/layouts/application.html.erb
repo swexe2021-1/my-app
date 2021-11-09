@@ -12,6 +12,13 @@
   <body>
     <h2 class="title">隣人レビュー</h2>
     <p>説明</p>
+    <% if current_user %>
+      <%= link_to "ユーザー一覧", users_path %>&nbsp;&nbsp;
+      <%= link_to "ログアウト", top_logout_path, method: :delete %><br>
+    <% else %>
+      <%= link_to "新規登録", new_user_path %>&nbsp;&nbsp;
+      <%= link_to "ログイン", top_main_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

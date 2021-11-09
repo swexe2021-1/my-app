@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get 'top/main'
   post 'top/login'
   root 'reviews#index'
-  get 'top/logout'
+  delete 'top/logout'
 end
