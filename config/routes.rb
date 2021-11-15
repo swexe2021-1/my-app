@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :reviews
   get 'top/main'
   post 'top/login'
-  root 'reviews#index'
+  root 'top#top'
   delete 'top/logout'
 end

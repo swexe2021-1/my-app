@@ -1,5 +1,22 @@
 <p> 
 <% if current_user %>
-  <%= link_to 'レビューする', new_review_path %>
+  <%= link_to "レビューする", new_review_path %><br>
+  レビュー一覧
+  <% @reviews.each do |e| %>
+      <p>
+        評価(1 ~ 5)：<%= e.star %><br>
+        詳細：<%= e.description %><br>
+        県：<%= e.prefecture %><br>
+        市：<%= e.city %><br>
+        区町村：<%= e.district %><br>
+        建物名：<%= e.building %><br>
+        号室：<%= e.number %><br>
+        <%= link_to '詳細',review_path(e) %>
+        <% if e.user_id == current_user.id %>
+            <%= link_to '編集', edit_review_path(e) %>
+            <%= link_to '削除', review_path(e), method: :delete %>
+        <% end %>
+        </p>
+    <% end %>
 <% end %>
 </p>

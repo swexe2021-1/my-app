@@ -2,8 +2,7 @@
   <p><%= label_tag :uid, 'ユーザID' %>
   <%= text_field_tag :uid %></p>
   <p><%= label_tag :pass, 'パスワード' %>
-  <%= text_field_tag :pass %></p>
+  <%= password_field_tag :pass %></p>
   <%= submit_tag 'ログイン' %>
 <% end %>
 <br>
-<p><%= link_to '新規登録', new_user_path %></p>

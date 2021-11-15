@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CS3</title>
+    <title>city review</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,15 +10,16 @@
   </head>
 
   <body>
-    <h2 class="title">隣人レビュー</h2>
+    <h2 class="title">city review</h2>
     <p>説明</p>
     <% if current_user %>
+      <%= link_to "レビュー一覧", reviews_path %>&nbsp;&nbsp;
       <%= link_to "ユーザー一覧", users_path %>&nbsp;&nbsp;
+      <%= link_to "マイページ", user_path(current_user.id) %>&nbsp;&nbsp;
       <%= link_to "ログアウト", top_logout_path, method: :delete %><br>
-    <% else %>
-      <%= link_to "新規登録", new_user_path %>&nbsp;&nbsp;
-      <%= link_to "ログイン", top_main_path %>
     <% end %>
+    <br>
+    --------------------------------------------------------------<br>
     <%= yield %>
   </body>
 </html>

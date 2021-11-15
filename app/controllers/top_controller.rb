@@ -1,4 +1,7 @@
 class TopController < ApplicationController
+    def top
+    end
+    
     def main
         render 'login'
     end
@@ -8,7 +11,7 @@ class TopController < ApplicationController
         if user and BCrypt::Password.new(user.pass) == params[:pass]
            flash[:notice] = 'ログインしました'
            session[:login_uid] = params[:uid]
-           redirect_to root_path
+           redirect_to reviews_path
         else
             flash[:notice] = 'ログインエラー'
             render 'login_failed'
