@@ -10,16 +10,31 @@
   </head>
 
   <body>
+    <header>
     <h2 class="title">city review</h2>
-    <p>説明</p>
+    
+    <nav>
     <% if current_user %>
-      <%= link_to "レビュー一覧", reviews_path %>&nbsp;&nbsp;
-      <%= link_to "ユーザー一覧", users_path %>&nbsp;&nbsp;
-      <%= link_to "マイページ", user_path(current_user.id) %>&nbsp;&nbsp;
-      <%= link_to "ログアウト", top_logout_path, method: :delete %><br>
+      <%= link_to "レビュー一覧", reviews_path , {class: "nav-link"}%>&nbsp;&nbsp;
+      <%= link_to "ユーザー一覧", users_path , {class: "nav-link"}%>&nbsp;&nbsp;
+      <%= link_to "マイページ", user_path(current_user.id) , {class: "nav-link"}%>&nbsp;&nbsp;
+      <%= link_to "ログアウト", top_logout_path, method: :delete, class: "nav-link" %><br>
     <% end %>
-    <br>
-    --------------------------------------------------------------<br>
+    </nav>
+
+    <div class="explanation">
+    　<div class="box1">
+    　　<p>説明</p>
+    　</div>
+    　<div class="box2">
+      　<img src="../../images/mati.png/">
+    　</div>
+    </div>
+    </header>
+    
+    <main>
     <%= yield %>
+    </main>
+    
   </body>
 </html>
