@@ -2,12 +2,21 @@
 <% if current_user %>
   <%= link_to "レビューする", new_review_path %><br>
   レビュー一覧
+  <%= search_form_for @q do |f| %>
+    <%= f.label :prefecture, "県検索" %>
+    <%= f.search_field :prefecture_cont %>
+    <%= f.label :city, "市検索" %>
+    <%= f.search_field :city_cont %>
+    <%= f.label :district, "区町村検索" %>
+    <%= f.search_field :district_cont %>
+    <%= f.submit '検索' %>
+  <% end %>
   <% @reviews.each do |e| %>
       <p>
         県：<%= e.prefecture %><br>
         市：<%= e.city %><br>
         区町村：<%= e.district %><br>
-        投稿時間: <%= e.tdate.strftime("%Y年%m月%d日") %><br>
+        投稿時間: <%= e.tdate.strftime("%Y年%m月%d日 %-H:%-M") %><br>
         評価カテゴリー: <%= e.category %><br>
         総合評価(1 ~ 5)：<%= e.star %><br>
         詳細：<%= e.description %><br>

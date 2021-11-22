@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
+    @q = Review.ransack(params[:q])
+    @reviews = @q.result(district: true)
   end
 
   def new
