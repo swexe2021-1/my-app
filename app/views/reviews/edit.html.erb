@@ -1,17 +1,26 @@
+<% if @review.errors.present? %>
+    <span style="color:red;">
+        <h3>エラーがあります。</h3>
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </span>
+<% end %>
+
 <%= form_for @review, url: {action: :update} do |f| %>
-  <p><%= f.label :star, '評価(1 ~ 5)' %> 
-  <%= f.number_field :star %></p>
-  <p><%= f.label :description, '詳細' %> 
-  <%= f.text_field :description %></p>
   <p><%= f.label :prefecture, '県' %> 
   <%= f.text_field :prefecture %></p>
   <p><%= f.label :city, '市' %> 
   <%= f.text_field :city %></p>
   <p><%= f.label :district, '区町村' %> 
   <%= f.text_field :district %></p> 
-  <p><%= f.label :building, '建物名' %> 
-  <%= f.text_field :building %></p>
-  <p><%= f.label :number, '号室' %> 
-  <%= f.text_field :number %></p> 
+  <p><%= f.label :category, '評価カテゴリー' %>
+  <%= f.text_field :category %></p>
+  <p><%= f.label :star, '総合評価(1 ~ 5)' %> 
+  <%= f.number_field :star %></p>
+  <p><%= f.label :description, '詳細' %>
+  <%= f.text_field :description %></p>
   <p><%= f.submit '更新する' %></p>
 <% end %>

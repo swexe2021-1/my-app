@@ -4,13 +4,13 @@
   レビュー一覧
   <% @reviews.each do |e| %>
       <p>
-        評価(1 ~ 5)：<%= e.star %><br>
-        詳細：<%= e.description %><br>
         県：<%= e.prefecture %><br>
         市：<%= e.city %><br>
         区町村：<%= e.district %><br>
-        建物名：<%= e.building %><br>
-        号室：<%= e.number %><br>
+        投稿時間: <%= e.tdate.strftime("%Y年%m月%d日") %><br>
+        評価カテゴリー: <%= e.category %><br>
+        総合評価(1 ~ 5)：<%= e.star %><br>
+        詳細：<%= e.description %><br>
         <%= link_to '詳細',review_path(e) %>
         <% if e.user_id == current_user.id %>
             <%= link_to '編集', edit_review_path(e) %>
