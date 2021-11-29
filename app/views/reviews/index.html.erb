@@ -1,7 +1,10 @@
-<p> 
+
 <% if current_user %>
-  <%= link_to "レビューする", new_review_path %><br>
-  レビュー一覧
+
+  <%= link_to "レビューする", new_review_path , {class: "review-link"}%><br>
+  
+  <div class="review">
+  
   <%= search_form_for @q do |f| %>
     <%= f.label :prefecture, "県検索" %>
     <%= f.search_field :prefecture_cont %>
@@ -11,6 +14,8 @@
     <%= f.search_field :district_cont %>
     <%= f.submit '検索' %>
   <% end %>
+  
+<p>レビュー一覧</p>
   <% @reviews.each do |e| %>
       <p>
         県：<%= e.prefecture %><br>
@@ -25,7 +30,7 @@
             <%= link_to '編集', edit_review_path(e) %>
             <%= link_to '削除', review_path(e), method: :delete %>
         <% end %>
-        </p>
+      </p>
     <% end %>
 <% end %>
-</p>
+</div>
