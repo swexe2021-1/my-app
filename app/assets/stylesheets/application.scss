@@ -14,6 +14,7 @@
  *= require_self
  */
 
+//app all
 body{
     margin: 0px;
     background-color: #f3eed5;
@@ -29,14 +30,14 @@ h2 {
 }
 
 nav{
-    background-color: #e4af9b;
-    color: #f3eed5;
+    color: #e4af9b;
     padding: 15px;
+    margin-bottom: 30px;
     
 }
 
-main{
-    padding: 15px;
+.main{
+    
 }
 
 .nav-link{
@@ -65,5 +66,35 @@ main{
 
 .need {
     color: red;
+//top
+.top{
+    text-align: center;
+    padding: 1em;
+}
+
+.top-link{
+    color: inherit;
+    text-decoration: none;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 20px 70px 20px 70px;
+    border: solid #e4af9b;
+    border-radius: 50px;
+}
+
+
+//reviwe
+.review{
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.review-link{
+    color: inherit;
+    text-decoration: none;
+    padding: 20px 70px 20px 70px;
+    border: solid #e4af9b;
+    border-radius: 50px;
+    margin-left: 300px;
 }
 
