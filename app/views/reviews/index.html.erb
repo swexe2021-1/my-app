@@ -17,7 +17,7 @@
           <th>県</th>
           <th>市</th>
           <th>区町村</th>
-          <th><%= sort_link(@q, :tdate, '投稿時間', default_order: :desc) %></th>
+          <th><%= sort_link(@q, :tdate, '投稿日', default_order: :desc) %></th>
           <th>評価カテゴリー</th>
           <th>総合評価(1 ~ 5)</th>
           <th>詳細</th>
@@ -28,7 +28,7 @@
             <td><%= e.prefecture %></td>
             <td><%= e.city %></td>
             <td><%= e.district %></td>
-            <td><%= e.tdate.strftime("%Y/%m/%d %-H:%-M") %></td>
+            <td><%= e.tdate.strftime("%Y/%m/%d") %></td>
             <td><%= e.category %></td>
             <td><%= e.star %></td>
             <td><%= e.description %></td>
