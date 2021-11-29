@@ -11,21 +11,34 @@
     <%= f.search_field :district_cont %>
     <%= f.submit '検索' %>
   <% end %>
-  <% @reviews.each do |e| %>
-      <p>
-        県：<%= e.prefecture %><br>
-        市：<%= e.city %><br>
-        区町村：<%= e.district %><br>
-        投稿時間: <%= e.tdate.strftime("%Y年%m月%d日 %-H:%-M") %><br>
-        評価カテゴリー: <%= e.category %><br>
-        総合評価(1 ~ 5)：<%= e.star %><br>
-        詳細：<%= e.description %><br>
-        <%= link_to '詳細',review_path(e) %>
-        <% if e.user_id == current_user.id %>
-            <%= link_to '編集', edit_review_path(e) %>
-            <%= link_to '削除', review_path(e), method: :delete %>
-        <% end %>
-        </p>
-    <% end %>
+  <br>
+      <table border="1">
+        <tr>
+          <th>県</th>
+          <th>市</th>
+          <th>区町村</th>
+          <th><%= sort_link(@q, :tdate, '投稿時間', default_order: :desc) %></th>
+          <th>評価カテゴリー</th>
+          <th>総合評価(1 ~ 5)</th>
+          <th>詳細</th>
+          <th>ボタン</th>
+        </tr>
+        <% @reviews.each do |e| %>
+        <tr>
+            <td><%= e.prefecture %></td>
+            <td><%= e.city %></td>
+            <td><%= e.district %></td>
+            <td><%= e.tdate.strftime("%Y/%m/%d %-H:%-M") %></td>
+            <td><%= e.category %></td>
+            <td><%= e.star %></td>
+            <td><%= e.description %></td>
+            <td><%= link_to '表示',review_path(e) %>
+            <% if e.user_id == current_user.id %>
+                <%= link_to '編集', edit_review_path(e) %>
+                <%= link_to '削除', review_path(e), method: :delete %>
+            <% end %></td>
+            <% end %>
+        </tr>
+      </table>
 <% end %>
 </p>
