@@ -1,26 +1,28 @@
-<% if @review.errors.present? %>
-    <span style="color:red;">
-        <h3>エラーがあります。</h3>
-        <ul>
-        <% @review.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-        </ul>
-    </span>
-<% end %>
-
-<%= form_for @review, url: {action: :create} do |f| %>
-  <p><%= f.label :prefecture, '県' %><strong class="need">※</strong>
-  <%= f.text_field :prefecture %></p>
-  <p><%= f.label :city, '市' %><strong class="need">※</strong>
-  <%= f.text_field :city %></p>
-  <p><%= f.label :district, '区町村' %><strong class="need">※</strong>
-  <%= f.text_field :district %></p> 
-  <p><%= f.label :category, '評価カテゴリー' %><strong class="need">※</strong>
-  <%= f.select(:category,  [['交通のアクセスが良い','交通のアクセスが良い'], ['ごみが少ない','ごみが少ない'], ['娯楽施設が多い','娯楽施設が多い'],['医療施設が多い','医療施設が多い'], ['子どもが多い','子どもが多い'], ['騒音が目立つ','騒音が目立つ'], ['夜道が暗い','夜道が暗い'],['災害が多い','災害が多い'], ['犯罪が多い','犯罪が多い'], ['その他（詳細へ記入）','その他（詳細へ記入）']]) %></p>
-  <p><%= f.label :star, '総合評価(1 ~ 5)' %><strong class="need">※</strong>
-  <%= f.number_field :star %></p>
-  <p><%= f.label :description, '詳細' %>
-  <%= f.text_field :description %></p>
-  <p><%= f.submit 'レビューする' %></p>
-<% end %>
+<div style="text-align:center">
+    <% if @review.errors.present? %>
+        <span style="color:red;">
+            <h3>エラーがあります。</h3>
+            <ul>
+            <% @review.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+            </ul>
+        </span>
+    <% end %>
+    
+    <%= form_for @review, url: {action: :create} do |f| %>
+      <p><%= f.label :prefecture, '県' %><strong class="need">※</strong>
+      <%= f.text_field :prefecture %></p>
+      <p><%= f.label :city, '市' %><strong class="need">※</strong>
+      <%= f.text_field :city %></p>
+      <p><%= f.label :district, '区町村' %><strong class="need">※</strong>
+      <%= f.text_field :district %></p> 
+      <p><%= f.label :category, '評価カテゴリー' %><strong class="need">※</strong>
+      <%= f.select(:category,  [['交通のアクセスが良い','交通のアクセスが良い'], ['ごみが少ない','ごみが少ない'], ['娯楽施設が多い','娯楽施設が多い'],['医療施設が多い','医療施設が多い'], ['子どもが多い','子どもが多い'], ['騒音が目立つ','騒音が目立つ'], ['夜道が暗い','夜道が暗い'],['災害が多い','災害が多い'], ['犯罪が多い','犯罪が多い'], ['その他（詳細へ記入）','その他（詳細へ記入）']]) %></p>
+      <p><%= f.label :star, '総合評価(1 ~ 5)' %><strong class="need">※</strong>
+      <%= f.number_field :star %></p>
+      <p><%= f.label :description, '詳細' %>
+      <%= f.text_field :description %></p>
+      <p><%= f.submit 'レビューする' %></p>
+    <% end %>
+</div>
