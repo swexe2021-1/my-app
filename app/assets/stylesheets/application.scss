@@ -20,24 +20,12 @@ body{
     background-color: #f3eed5;
 }
 
-h2 {
-    text-align: center;
-    color: #e4af9b;
-    background-color: #d4dfbb;
-    padding: 1em;
-    font-size: 40px;
-    margin: 0px;
-}
-
 nav{
     color: #e4af9b;
     padding: 15px;
     margin-bottom: 30px;
-    
-}
-
-.main{
-    
+    margin-left: 40px;
+    font-size: 30px;
 }
 
 .nav-link{
@@ -45,23 +33,44 @@ nav{
     text-decoration: none;
 }
 
+.main{
+    
+}
+
 .explanation{
     display: flex;
-    justify-content: center;
     background-color: #e4af9b;
+    background-image: image-url('back05.png');
+    background-size: cover;
     padding: 1em;
     padding-bottom: 30px;
     margin-bottom: 20px;
 }
 
-.box1{
-    width: 45%;
-    color: #f3eed5;
-    
+h2 {
+    color: #e4af9b;
+    background-color: #d4dfbb;
+    padding:  100px 30px;
+    font-size: 80px;
+    margin: auto 0px;
+    margin-left: 40px;
+    border: double;
+    border-width: 10px;
+    border-color: #A7BD74;
 }
+
+.box1{
+    width: 80%;
+    display        : inline-block;
+    color          : #f3eed5;            /* 文字の色 */
+    font-size      : 20pt;               /* 文字のサイズ */
+    letter-spacing : 4px;                /* 文字間 */
+    margin: 30px;
+}
+
 .box2{
     width: 45%;
-    
+    text-align: center;
 }
 
 .need {
