@@ -12,13 +12,17 @@
     <%= f.search_field :city_cont %>
     <%= f.label :district, "区町村検索" %>
     <%= f.search_field :district_cont %>
-    <%= f.submit '検索' %>
+      <%= f.button :type => "submit", style: 'border-style: none;' do %>
+        <i class='fa fa-search'>検索</i>
+      <% end %>
   <% end %>
   <br>
   <%= search_form_for @q do |f| %>
   　 <%= f.label :category, "評価カテゴリー検索" %>
   　<%= f.select(:category_eq,  [['交通のアクセスが良い','交通のアクセスが良い'], ['ごみが少ない','ごみが少ない'], ['娯楽施設が多い','娯楽施設が多い'],['医療施設が多い','医療施設が多い'], ['子どもが多い','子どもが多い'], ['騒音が目立つ','騒音が目立つ'], ['夜道が暗い','夜道が暗い'],['災害が多い','災害が多い'], ['犯罪が多い','犯罪が多い']]) %>
-  　<%= f.submit '検索' %>
+  　   <%= f.button :type => "submit", style: 'border-style: none;' do %>
+        <i class='fa fa-search'>検索</i>
+      <% end %>
   <% end %>
   <br>
       <table border="1">
