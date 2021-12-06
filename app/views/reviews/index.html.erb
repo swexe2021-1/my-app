@@ -1,8 +1,8 @@
 
 <% if current_user %>
-
   <%= link_to "レビューする", new_review_path , {class: "review-link"}%><br>
-  
+<% end %> 
+
   <div class="review">
   
   <%= search_form_for @q do |f| %>
@@ -26,9 +26,9 @@
           <th>県</th>
           <th>市</th>
           <th>区町村</th>
-          <th><%= sort_link(@q, :tdate, '投稿日', default_order: :desc) %></th>
+          <th>投稿日</th>
           <th>評価カテゴリー</th>
-          <th>総合評価(1 ~ 5)</th>
+          <th><%= sort_link(@q, :star, '総合評価(1 ~ 5)', default_order: :desc) %></th>
           <th>詳細</th>
           <th>ボタン</th>
         </tr>
@@ -53,8 +53,7 @@
                 <%= link_to '編集', edit_review_path(e) %>
                 <%= link_to '削除', review_path(e), method: :delete %>
             <% end %></td>
-            <% end %>
+        <% end %>
         </tr>
       </table>
-<% end %>
 </div>
