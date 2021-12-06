@@ -1,27 +1,23 @@
 
 <% if current_user %>
 
-  <%= link_to "レビューする", new_review_path , {class: "review-link"}%><br>
+  <div class="review-a">
+    <%= link_to "レビューする", new_review_path , {class: "review-link"}%><br>
+  </div>
   
+  <div class="review-index">
+
+  
+
   <div class="review">
-  
-  <%= search_form_for @q do |f| %>
-    <%= f.label :prefecture, "県検索" %>
-    <%= f.search_field :prefecture_cont %>
-    <%= f.label :city, "市検索" %>
-    <%= f.search_field :city_cont %>
-    <%= f.label :district, "区町村検索" %>
-    <%= f.search_field :district_cont %>
-    <%= f.submit '検索' %>
-  <% end %>
-  <br>
   <%= search_form_for @q do |f| %>
   　 <%= f.label :category, "評価カテゴリー検索" %>
   　<%= f.select(:category_eq,  [['交通のアクセスが良い','交通のアクセスが良い'], ['ごみが少ない','ごみが少ない'], ['娯楽施設が多い','娯楽施設が多い'],['医療施設が多い','医療施設が多い'], ['子どもが多い','子どもが多い'], ['騒音が目立つ','騒音が目立つ'], ['夜道が暗い','夜道が暗い'],['災害が多い','災害が多い'], ['犯罪が多い','犯罪が多い'], ['その他（詳細へ記入）','その他（詳細へ記入）']]) %>
   　<%= f.submit '検索' %>
   <% end %>
   <br>
-      <table border="1">
+  
+      <table border="1" class="review-table">
         <tr>
           <th>県</th>
           <th>市</th>
@@ -49,5 +45,19 @@
             <% end %>
         </tr>
       </table>
-<% end %>
+  <% end %>
+  </div><br>
+  
+  <div class="search">
+  <%= search_form_for @q do |f| %>
+    <%= f.label :prefecture, "県検索" %><br>
+    <%= f.search_field :prefecture_cont %><br>
+    <%= f.label :city, "市検索" %><br>
+    <%= f.search_field :city_cont %><br>
+    <%= f.label :district, "区町村検索" %><br>
+    <%= f.search_field :district_cont %><br>
+      <%= f.submit '検索' ,class: 'search-bottom'%>
+    </div>
+  <% end %>
+  
 </div>
