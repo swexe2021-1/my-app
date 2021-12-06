@@ -2,9 +2,9 @@
   <%= link_to "ログイン", top_main_path , {class: "top-link"}%>
 <% end %>
 <% @users.each do |e| %>
-  <p>
+  <p class="users-p">
     <%= e.uid %>
-    <%= link_to '削除', user_path(e), method: :delete %>
-    </p>
+    <%= link_to '削除', user_path(e), method: :delete, class: "users-link"%>
+  </p>
 <% end %>
 

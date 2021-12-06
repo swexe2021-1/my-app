@@ -20,7 +20,7 @@
     　</div>
     </header>
     
-    <main>
+    
       <nav>
       <% if current_user %>
         <%= link_to "レビュー一覧", reviews_path , {class: "nav-link"}%>&nbsp;&nbsp;
@@ -29,6 +29,7 @@
         <%= link_to "ログアウト", top_logout_path, method: :delete, class: "nav-link" %><br>
       <% end %>
       </nav>
+    <main class="main"> 
     <%= yield %>
     </main>
     
