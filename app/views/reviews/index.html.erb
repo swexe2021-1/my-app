@@ -69,7 +69,9 @@
     <%= f.search_field :city_cont %><br>
     <%= f.label :district, "区町村検索" %><br>
     <%= f.search_field :district_cont %><br>
-      <%= f.submit '検索' ,class: 'search-bottom'%>
+       <%= f.button :type => "submit", style: 'border-style: none;' do %>
+        <i class='fa fa-search'>検索</i>
+      <% end %>
     </div>
   <% end %>
   
