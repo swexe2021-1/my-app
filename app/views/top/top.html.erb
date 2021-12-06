@@ -1,6 +1,10 @@
 <div class="top">
     <% if !current_user %>
-        <%= link_to "新規登録", new_user_path , {class: "top-link"}%>&nbsp;&nbsp;
-        <%= link_to "ログイン", top_main_path , {class: "top-link"}%>
+        <%= link_to new_user_path, {class: "top-link"} do %>
+            <i class="fas fa-user-plus">  新規登録 </i>
+        <% end %>&nbsp;&nbsp;
+        <%= link_to top_main_path, {class: "top-link"} do %>
+            <i class="fas fa-sign-in-alt">  ログイン </i>
+        <% end %>
     <% end %>
 </div>
