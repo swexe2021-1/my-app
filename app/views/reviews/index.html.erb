@@ -1,6 +1,8 @@
 
 <% if current_user %>
-  <%= link_to "レビューする", new_review_path , {class: "review-link"}%><br>
+  <%= link_to new_review_path, {class: "review-link"} do %>
+            <i class="fas fa-pen">  レビューする </i>
+  <% end %>
 <% end %> 
 
   <div class="review">
@@ -55,7 +57,7 @@
             <td><%= link_to '表示',review_path(e) %>
             <% if e.user_id == current_user.id %>
                 <%= link_to '編集', edit_review_path(e) %>
-                <%= link_to '削除', review_path(e), method: :delete %>
+                <%= link_to '削除', review_path(e), method: :delete, data: {confirm: "削除しますか？"} %>
             <% end %></td>
         <% end %>
         </tr>

@@ -1,12 +1,11 @@
 <br>
 ユーザー名：<%= @user.uid %><br>
 <br>
-<%= link_to "ユーザ編集", edit_user_path(@user) %>
+<i class="fas fa-user-edit"></i><%= link_to "ユーザ編集", edit_user_path(@user) %><br>
+<i class="fas fa-user-minus"></i><%= link_to 'ユーザ削除', user_path(@user), method: :delete, data: {confirm: "削除しますか？"} %>
 <br><br><br>
 <%= @user.uid %> さんの投稿
 <table border="1">
-    <% @reviews.each do |e| %>
-        <% if e.user_id == current_user.id %>
             <tr>
               <th>県</th>
               <th>市</th>
@@ -17,6 +16,8 @@
               <th>詳細</th>
               <th>ボタン</th>
             </tr>
+            <% @reviews.each do |e| %>
+            <% if e.user_id == current_user.id %>
             <tr>
                 <td><%= e.prefecture %></td>
                 <td><%= e.city %></td>
