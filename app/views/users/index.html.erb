@@ -1,4 +1,6 @@
-<%= link_to "ログイン", top_main_path , {class: "top-link"}%>
+<% if !current_user %>
+  <%= link_to "ログイン", top_main_path , {class: "top-link"}%>
+<% end %>
 <% @users.each do |e| %>
   <p>
     <%= e.uid %>
