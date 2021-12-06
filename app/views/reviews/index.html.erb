@@ -1,18 +1,13 @@
-
 <% if current_user %>
+  <div class="review-a">          
   <%= link_to new_review_path, {class: "review-link"} do %>
             <i class="fas fa-pen">  レビューする </i>
   <% end %>
+  </div>
 <% end %> 
 
-  <div class="review-a">
-    <%= link_to "レビューする", new_review_path , {class: "review-link"}%><br>
-  </div>
-  
+
   <div class="review-index">
-
-  
-
   <div class="review">
   <%= search_form_for @q do |f| %>
   　 <%= f.label :category, "評価カテゴリー検索" %>
@@ -58,7 +53,6 @@
         <% end %>
         </tr>
       </table>
-  <% end %>
   </div><br>
   
   <div class="search">
@@ -71,8 +65,7 @@
     <%= f.search_field :district_cont %><br>
        <%= f.button :type => "submit", style: 'border-style: none;' do %>
         <i class='fa fa-search'>検索</i>
-      <% end %>
-    </div>
-  <% end %>
-  
+    <% end %>
+    <% end %>
+  </div>
 </div>
