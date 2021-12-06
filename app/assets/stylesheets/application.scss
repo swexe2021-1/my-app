@@ -25,7 +25,7 @@ nav{
     padding: 15px;
     margin-bottom: 30px;
     margin-left: 40px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .nav-link{
@@ -50,8 +50,8 @@ nav{
 h2 {
     color: #e4af9b;
     background-color: #d4dfbb;
-    padding:  100px 30px;
-    font-size: 80px;
+    padding:  80px 30px;
+    font-size: 60px;
     margin: auto 0px;
     margin-left: 40px;
     border: double;
@@ -63,7 +63,7 @@ h2 {
     width: 80%;
     display        : inline-block;
     color          : #f3eed5;            /* 文字の色 */
-    font-size      : 20pt;               /* 文字のサイズ */
+    font-size      : 15pt;               /* 文字のサイズ */
     letter-spacing : 4px;                /* 文字間 */
     margin: 30px;
 }
@@ -95,9 +95,16 @@ h2 {
 
 
 //reviwe
+.review-index{
+    display: flex;
+    margin-top: 50px;
+}
+
 .review{
-    margin-top: 30px;
+    margin-left: 20px;
     padding: 15px;
+    width: 70%;
+    text-align: center;
 }
 
 .review-link{
@@ -106,7 +113,6 @@ h2 {
     padding: 20px 70px 20px 70px;
     border: solid #e4af9b;
     border-radius: 50px;
-    margin-left: 300px;
 }
 
 .star-field{
@@ -134,4 +140,37 @@ h2 {
 .star{
   font-size: 20px;
   color: rgb(255, 145, 0);
+}
+
+.review-a{
+    margin: 50px;
+    text-align: center;
+}
+
+.search{
+    margin-left: 25px;
+    width: 27%;
+    text-align: start;
+}
+
+.search-bottom{
+    background-color: #e4af9b;
+    margin-top: 5px;
+}
+
+#q_prefecture_cont ,#q_city_cont{
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+}
+
+#q_district_cont{
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+}
+
+.review-table{
+    box-sizing: content-box;
+    width: 100%;
 }
