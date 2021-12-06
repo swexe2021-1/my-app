@@ -40,6 +40,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @reviews = Review.all
+    @q = Review.ransack(params[:q])
+    @reviews = @q.result(district: true)
     @user = User.find(params[:id])
   end
   

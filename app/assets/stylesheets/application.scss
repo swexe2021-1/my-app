@@ -109,3 +109,29 @@ h2 {
     margin-left: 300px;
 }
 
+.star-field{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.star-field input[type='radio']{
+    display: none;
+}
+.star-field label{
+    font-size: 30px;
+    padding-right: 5px;
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+} 
+.star-field label:hover,
+.star-field label:hover ~ label,
+.star-field input[type='radio']:checked ~ label{
+    color: rgb(255, 145, 0);
+}
+
+// 一覧表示ページ
+.star{
+  font-size: 20px;
+  color: rgb(255, 145, 0);
+}
