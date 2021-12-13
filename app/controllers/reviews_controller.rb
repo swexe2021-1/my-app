@@ -44,6 +44,7 @@ class ReviewsController < ApplicationController
     @latitude = @review.latitude
     @longitude = @review.longitude
     @address = @review.address
+    @parameters = Parameter.all
   end
 
   def destroy

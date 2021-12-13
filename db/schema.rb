@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_095953) do
+ActiveRecord::Schema.define(version: 2021_12_13_085159) do
+
+  create_table "parameters", force: :cascade do |t|
+    t.string "api_key"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "reviews", force: :cascade do |t|
     t.integer "star"

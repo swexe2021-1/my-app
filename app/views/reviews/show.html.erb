@@ -39,9 +39,12 @@
         });
     }
 </script>
+<% @parameters.each do |e| %>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=###&callback=initMap">
+        src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= e.api_key %>&callback=initMap'>
 </script>
+<% end %>
+
   
   <style type="text/css">
   #map { height: 400px;
