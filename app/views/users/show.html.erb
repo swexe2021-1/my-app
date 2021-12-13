@@ -27,7 +27,7 @@
             <% if e.user_id == current_user.id %>
             <tr>
                 <td><%= e.prefecture %></td>
-                <td><%= e.city %></td>
+                <td><%= e.address %></td>
                 <td><%= e.district %></td>
                 <td><%= e.tdate.strftime("%Y/%m/%d") %></td>
                 <td><%= e.category %></td>
@@ -42,7 +42,7 @@
                 <td><%= e.description %></td>
                 <td><%= link_to '表示',review_path(e), class: "review-btn-link" %>
                     <%= link_to '編集', edit_review_path(e), class: "review-btn-link" %>
-                    <%= link_to '削除', review_path(e), method: :delete, class: "review-btn-link" %>
+                    <%= link_to '削除', review_path(e), method: :delete, data: {confirm: "削除しますか？"}, class: "review-btn-link" %>
                 </td>
             </tr>
         <% end %>

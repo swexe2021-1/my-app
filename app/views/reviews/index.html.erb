@@ -32,7 +32,7 @@
         <% @reviews.each do |e| %>
         <tr>
             <td><%= e.prefecture %></td>
-            <td><%= e.city %></td>
+            <td><%= e.address %></td>
             <td><%= e.district %></td>
             <td><%= e.tdate.strftime("%Y/%m/%d") %></td>
             <td><%= e.category %></td>
@@ -59,8 +59,8 @@
   <%= search_form_for @q do |f| %>
     <%= f.label :prefecture, "県検索" %><br>
     <%= f.search_field :prefecture_cont %><br>
-    <%= f.label :city, "市検索" %><br>
-    <%= f.search_field :city_cont %><br>
+    <%= f.label :address, "市検索" %><br>
+    <%= f.search_field :address_cont %><br>
     <%= f.label :district, "区町村検索" %><br>
     <%= f.search_field :district_cont %><br>
        <%= f.button :type => "submit", style: 'border-style: none;' ,class: 'search-btn' do %>
