@@ -19,7 +19,7 @@
   <%= f.password_field :password_confirmation %></p>
   <p class="btn">
       <%= f.submit '更新',class: 'submit'%>
-      <%= link_to '戻る', :back , {class: "back-link"}%>
+      <%= link_to '戻る', user_path(current_user.id) , {class: "back-link"}%>
   </p>
 <% end %>
 </div>
