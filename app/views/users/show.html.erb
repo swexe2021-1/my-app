@@ -1,10 +1,17 @@
-<br>
-ユーザー名：<%= @user.uid %><br>
-<br>
-<i class="fas fa-user-edit"></i><%= link_to "ユーザ編集", edit_user_path(@user) %><br>
-<i class="fas fa-user-minus"></i><%= link_to 'ユーザ削除', user_path(@user), method: :delete, data: {confirm: "削除しますか？"} %>
-<br><br><br>
-<%= @user.uid %> さんの投稿
+<h3>ユーザー名：<strong class="myuser-uid"><%= @user.uid %></strong></h3><br>
+
+<div>
+<%= link_to edit_user_path(@user) , {class: "myuser-link"} do%>
+  <i class="fas fa-user-edit">　ユーザ編集</i>
+<% end %>
+<%= link_to user_path(@user), method: :delete, data: {confirm: "削除しますか？"} ,class: "myuser-link" do%>
+<i class="fas fa-user-minus">　ユーザ削除</i>
+<% end %>
+</div>
+
+
+<div class="myuser">
+<p><%= @user.uid %> さんの投稿</p>
 <table border="1">
             <tr>
               <th>県</th>
@@ -33,12 +40,12 @@
                   <% end %>
                 </div></td>
                 <td><%= e.description %></td>
-                <td><%= link_to '表示',review_path(e) %>
-                    <%= link_to '編集', edit_review_path(e) %>
-                    <%= link_to '削除', review_path(e), method: :delete %>
+                <td><%= link_to '表示',review_path(e), class: "review-btn-link" %>
+                    <%= link_to '編集', edit_review_path(e), class: "review-btn-link" %>
+                    <%= link_to '削除', review_path(e), method: :delete, class: "review-btn-link" %>
                 </td>
             </tr>
         <% end %>
     <% end %>
 </table>
- 
+</div>

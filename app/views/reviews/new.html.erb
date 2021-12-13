@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div class="review-new-edit">
     <% if @review.errors.present? %>
         <span style="color:red;">
             <h3>エラーがあります。</h3>
@@ -18,7 +18,7 @@
       <p><%= f.label :district, '区町村' %><strong class="need">※</strong>
       <%= f.text_field :district %></p> 
       <p><%= f.label :category, '評価カテゴリー' %><strong class="need">※</strong>
-      <%= f.select(:category,  [['交通のアクセスが良い','交通のアクセスが良い'], ['ごみが少ない','ごみが少ない'], ['娯楽施設が多い','娯楽施設が多い'],['医療施設が多い','医療施設が多い'], ['子どもが多い','子どもが多い'], ['騒音が目立つ','騒音が目立つ'], ['夜道が暗い','夜道が暗い'],['災害が多い','災害が多い'], ['犯罪が多い','犯罪が多い'], ['その他（詳細へ記入）','その他（詳細へ記入）']]) %></p>
+      <%= f.select(:category,  [['交通のアクセスが良い','交通のアクセスが良い'], ['ごみが少ない','ごみが少ない'], ['娯楽施設が多い','娯楽施設が多い'],['医療施設が多い','医療施設が多い'], ['子どもが多い','子どもが多い'], ['騒音が目立つ','騒音が目立つ'], ['夜道が暗い','夜道が暗い'],['災害が多い','災害が多い'], ['犯罪が多い','犯罪が多い'], ['その他（詳細へ記入）','その他（詳細へ記入）']],{} , {class: 'select'}) %></p>
       <%= f.label :star, '総合評価(1 ~ 5)' %><strong class="need">※</strong>
       <div class="star-field">
         <input id="star5" type="radio" name="review[star]" value="5" />
@@ -32,8 +32,11 @@
         <input id="star1" type="radio" name="review[star]" value="1" />
         <label for="star1">★</label>
       </div>
-      <p><%= f.label :description, '詳細' %>
-      <%= f.text_field :description %></p>
-      <p><%= f.submit '投稿する', data: { disable_with: '投稿中..' } %></p>
-      <p><%= link_to '戻る', :back %></p>
+      <p><%= f.label :description, '詳細' %><br>
+      <%= f.text_area :description %></p>
+      <p class="btn">
+          <%= f.submit '投稿する', data: { disable_with: '投稿中..' } ,class: 'submit'%>
+          <%= link_to '戻る', :back , {class: "back-link"}%>
+      </p>
     <% end %>
+    </div>
