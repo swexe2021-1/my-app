@@ -81,7 +81,7 @@ h2 {
     width: 52%;
     display: inline-block;
     color: #f3eed5;            /* 文字の色 */
-    font-size: 15pt;               /* 文字のサイズ */
+    font-size: 20pt;               /* 文字のサイズ */
     letter-spacing: 4px;                /* 文字間 */
     margin: 30px;
     font-weight: 600;
@@ -421,13 +421,41 @@ table th{
 //review-show
 .review-show{
     font-size: 25px;
-    margin-left: 100px;
+    text-align: center;
 }
 
 .star-show{
     font-size: 40px;
-    margin-left: 10px;
     vertical-align: -10%;
+}
+
+.review-show-pre{
+    margin-right: 45px;
+    margin-left: 105px;
+}
+
+.review-show-add{
+    margin-right: 45px;
+    margin-left: 105px;
+}
+
+.review-show-dis{
+    margin-right: 45px;
+    margin-left: 79px;
+}
+
+.review-show-cat{
+    margin-right: 45px;
+    margin-left: 4px;
+}
+
+.review-show-star{
+    margin-right: 25px;
+}
+
+.review-show-des{
+    margin-right: 45px;
+    margin-left: 105px;
 }
 
 //user
@@ -437,6 +465,8 @@ table th{
 }
 
 .users-h3{
+    margin: 20px;
+    margin-bottom: 60px;
     font-size: 30px;
 }
 
@@ -465,7 +495,7 @@ table th{
 
 .users{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 120px;
 }
 
 //myuser(users/show)

@@ -1,16 +1,16 @@
 <div class="review-show">
-<p>県：<%= @review.prefecture %></p>
-<p>市：<%= @review.address %></p>
-<p>区町村：<%= @review.district %></p>
-<p>評価カテゴリー：<%= @review.category %></p>
-<p>総合評価(1 ~ 5)：<snap class="star star-show" >
+<p><strong class="review-show-pre">県：</strong><%= @review.prefecture %></p>
+<p><strong class="review-show-add">市：</strong><%= @review.address %></p>
+<p><strong class="review-show-dis">区町村：</strong><%= @review.district %></p>
+<p><strong class="review-show-cat">評価カテゴリー：</strong><%= @review.category %></p>
+<p><strong class="review-show-star">総合評価(1 ~ 5)：</strong><snap class="star star-show" >
               <% if @review.star %>
                 <% for i in 1..@review.star do %>
                   ★
                 <% end %>
               <% end %>
             </snap></p>
-<p>詳細：<%= @review.description %></p>
+<p><strong class="review-show-des">詳細：</strong><%= @review.description %></p>
 
 <script type="text/javascript">
     function initMap() {

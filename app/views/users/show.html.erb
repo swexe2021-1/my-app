@@ -40,7 +40,7 @@
                   <% end %>
                 </div></td>
                 <td><%= e.description %></td>
-                <td><%= link_to '表示',review_path(e), class: "review-btn-link" %>
+                <td><%= link_to '表示', review_path(e), class: "review-btn-link" %>
                     <%= link_to '編集', edit_review_path(e), class: "review-btn-link" %>
                     <%= link_to '削除', review_path(e), method: :delete, data: {confirm: "削除しますか？"}, class: "review-btn-link" %>
                 </td>

@@ -1,9 +1,11 @@
-<h3 class="users-h3">ユーザ一覧</h3>
+
 <% if !current_user %>
 <div class="users">
   <%= link_to "ログイン", top_main_path , {class: "top-link"}%>
 </div>
 <% end %>
+
+<h3 class="users-h3">登録ユーザ一覧</h3>
 <% @users.each do |e| %>
   <p class="users-p">
     ユーザ：<strong class="users-uid"><%= e.uid %></strong>
