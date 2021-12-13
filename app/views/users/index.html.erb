@@ -1,5 +1,7 @@
 <% if !current_user %>
+<div class="users">
   <%= link_to "ログイン", top_main_path , {class: "top-link"}%>
+</div>
 <% end %>
 <% @users.each do |e| %>
   <p class="users-p">

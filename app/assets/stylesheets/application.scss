@@ -15,6 +15,13 @@
  */
 
 //app all
+@font-face {
+  font-family: "Phenomena-Black";
+  src: font-url('Phenomena-Black.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
     margin: 0px;
     background-color: #f3eed5;
@@ -25,7 +32,7 @@ nav{
     padding: 15px;
     margin-bottom: 30px;
     margin-left: 40px;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .nav-link{
@@ -33,13 +40,35 @@ nav{
     text-decoration: none;
 }
 
+.nav-link:hover{
+    color: #BDCE96;
+}
+
 .main{
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+h2 {
+    color: #e4af9b;
+    background-color: #d4dfbb;
+    padding: 20px;
+    padding-left: 45px;
+    font-size: 90px;
+    margin: auto 0px;
+    border-top: double;
+    border-bottom: double;
+    border-width: 10px;
+    border-color: #A7BD74;
+    font-family: Phenomena-Black;
+    letter-spacing: 0.05em
 }
 
 .explanation{
     display: flex;
+    align-items: center;
     background-color: #e4af9b;
     background-image: image-url('back05.png');
     background-size: cover;
@@ -48,34 +77,67 @@ nav{
     margin-bottom: 20px;
 }
 
-h2 {
-    color: #e4af9b;
-    background-color: #d4dfbb;
-    padding:  80px 30px;
-    font-size: 60px;
-    margin: auto 0px;
-    margin-left: 40px;
-    border: double;
-    border-width: 10px;
-    border-color: #A7BD74;
-}
-
 .box1{
-    width: 80%;
-    display        : inline-block;
-    color          : #f3eed5;            /* 文字の色 */
-    font-size      : 15pt;               /* 文字のサイズ */
-    letter-spacing : 4px;                /* 文字間 */
+    width: 52%;
+    display: inline-block;
+    color: #f3eed5;            /* 文字の色 */
+    font-size: 15pt;               /* 文字のサイズ */
+    letter-spacing: 4px;                /* 文字間 */
     margin: 30px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
 }
 
 .box2{
-    width: 45%;
-    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 47%;
+}
+
+.image{
+    margin: 20px;
+    width: 90%;
 }
 
 .need {
     color: red;
+}
+
+.submit{
+    color: inherit;
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px 30px 5px 30px;
+    border: solid #e4af9b;
+    border-radius: 50px;
+    font-size: 18px;
+    background: none;
+}
+
+.submit:hover{
+    color: #e4af9b;
+}
+
+.btn{
+    margin-top: 10px;
+}
+
+.back-link{
+    color: inherit;
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px 30px 5px 30px;
+    border: solid #e4af9b;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.back-link:hover{
+    color: #e4af9b;
+}
+
+.field_with_errors {
+  display: contents;
 }
 
 //top
@@ -94,6 +156,74 @@ h2 {
     border-radius: 50px;
 }
 
+.top-link:hover{
+    color: #e4af9b;
+}
+
+//login
+.login{
+    text-align: center;
+    font-size: 18px;
+}
+
+#uid{
+    width: 250px;
+    height: 25px;
+    margin: 5px;
+    margin-left: 29px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#pass{
+    width: 250px;
+    height: 25px;
+    margin: 5px;
+    margin-left: 15px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.failed{
+    text-align: center;
+}
+
+.failed-btn{
+    margin-top: 30px;
+}
+
+//user-new
+#user_uid{
+    width: 250px;
+    height: 25px;
+    margin: 5px;
+    margin-left: 156px;
+    padding: 5px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
+
+#user_password{
+    width: 250px;
+    height: 25px;
+    margin: 5px;
+    margin-left: 87px;
+    padding: 5px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
+
+#user_password_confirmation{
+    width: 250px;
+    height: 25px;
+    margin: 5px;
+    margin-left: 15px;
+    padding: 5px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
 
 //reviwe
 .review-index{
@@ -103,8 +233,9 @@ h2 {
 
 .review{
     padding: 15px;
-    width: 70%;
+    width: 79%;
     text-align: center;
+    font-size: 18px;
 }
 
 .review-link{
@@ -113,7 +244,11 @@ h2 {
     padding: 20px 70px 20px 70px;
     border: solid #e4af9b;
     border-radius: 50px;
-    
+    font-size: 25px;
+}
+
+.review-link:hover{
+    color: #e4af9b;
 }
 
 .review-a{
@@ -121,27 +256,67 @@ h2 {
     text-align: center;
 }
 
-.search{
-    margin-left: 25px;
-    width: 27%;
-    text-align: start;
-}
-
-#q_prefecture_cont ,#q_city_cont{
-    width: 150px;
-    height: 50px;
-    margin: 5px;
-}
-
-#q_district_cont{
-    width: 150px;
-    height: 50px;
-    margin: 5px;
-}
-
 .review-table{
     box-sizing: content-box;
     width: 100%;
+}
+
+.search{
+    margin-top: 115px;
+    margin-left: 50px;
+    width: 20%;
+    text-align: start;
+    font-size: 18px;
+}
+
+.search-btn{
+    background: #E9BEAE;
+    padding: 5px;
+    margin-top: 45px;
+    margin-left: 120px;
+    box-shadow: 4px 2px #867627;
+}
+
+.search-btn:hover{
+    background: #F2DBD2;
+}
+
+#q_prefecture_cont ,#q_city_cont ,#q_district_cont{
+    width: 150px;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background: #f3eed5;
+    box-shadow: 4px 2px #867627;
+    font-size: 17px;
+}
+
+.select{
+    padding: 3px;
+    background: #f3eed5;
+    margin: 5px;
+    margin-left: 20px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
+
+.sort_link{
+    color: #B45431;
+    text-decoration: none;
+}
+
+.sort_link:hover{
+    color: #e4af9b;
+}
+
+.review-btn-link{
+    color: #000;
+}
+
+.review-btn-link:hover{
+    color: #e4af9b;
 }
 
 //星
@@ -174,6 +349,81 @@ h2 {
     color: rgb(255, 145, 0);
 }
 
+//table
+table{
+    border-collapse: collapse;
+    border: solid 4px #e4af9b;
+    width: 100%;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 5px;
+    border: dashed 2px #e4af9b;
+}
+
+table th{
+    border-bottom: solid 4px #e4af9b;
+    background: #F4DED6;
+    font-size: 20px;
+}
+
+//review-new
+.review-new-edit{
+    text-align: center;
+    font-size: 18px;
+}
+
+#review_prefecture{
+    margin: 5px;
+    margin-left: 56px;
+    padding: 5px;
+    width: 225px;
+    height: 20px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
+
+#review_address{
+    margin: 5px;
+    margin-left: 56px;
+    padding: 5px;
+    width: 225px;
+    height: 20px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
+
+#review_district{
+    margin: 5px;
+    margin-left: 20px;
+    padding: 5px;
+    width: 225px;
+    height: 20px;
+    box-shadow: 4px 2px #867627;
+    font-size: 18px;
+}
+
+#review_description{
+    margin: 5px;
+    width: 320px;
+    height: 100px;
+    font-size: 15px;
+    padding: 5px;
+    box-shadow: 4px 2px #867627;
+}
+
+//review-show
+.review-show{
+    font-size: 25px;
+    margin-left: 100px;
+}
+
+.star-show{
+    font-size: 40px;
+    margin-left: 10px;
+    vertical-align: -10%;
+}
 
 //user
 .users-p{
@@ -184,11 +434,49 @@ h2 {
 .users-link{
     color: inherit;
     text-decoration: none;
-    margin: 10px;
+    margin: 20px;
     padding: 5px 20px 5px 20px;
     border: solid #e4af9b;
     border-radius: 50px;
     font-size: 15px;
+}
+
+.users-link:hover{
+    color: #e4af9b;
+}
+
+.user-new-edit{
+    text-align: center;
+    font-size: 18px;
+}
+
+.users{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+//myuser(users/show)
+.myuser-uid{
+    font-size: 35px;
+}
+
+
+.myuser-link{
+    color: inherit;
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px 20px 5px 20px;
+    border: solid #e4af9b;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.myuser-link:hover{
+    color: #e4af9b;
+}
+
+.myuser{
+    margin-top: 70px;
 }
 
 

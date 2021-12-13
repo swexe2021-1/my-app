@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div class="user-new-edit">
     <% if @user.errors.present? %>
         <span style="color:red;">
             <h3>エラーがあります。</h3>
@@ -11,13 +11,15 @@
     <% end %>
     
     <%= form_for @user , url: {action: :create} do |f| %>
-      <%= f.label :uid, 'ID' %>
-      <%= f.text_field :uid %>
-    　<p><%= f.label :password, 'パスワード' %>
+      <p><%= f.label :uid, 'ID' %>
+      <%= f.text_field :uid %></p>
+      <p><%= f.label :password, 'パスワード' %>
       <%= f.password_field :password %></p>
       <p><%= f.label :password_confirmation, 'パスワード（確認）' %>
       <%= f.password_field :password_confirmation %></p>
-      <%= f.submit '登録' %>
-      <p><%= link_to '戻る', :back %></p>
+      <p class="btn">
+          <%= f.submit '登録' ,class: 'submit' %>
+          <%= link_to '戻る', :back , {class: "back-link"}%>
+      </p>
     <% end %>
 </div>
