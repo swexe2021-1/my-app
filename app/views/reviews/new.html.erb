@@ -36,7 +36,7 @@
       <%= f.text_area :description %></p>
       <p class="btn">
           <%= f.submit '投稿する', data: { disable_with: '投稿中..' } ,class: 'submit'%>
-          <%= link_to '戻る', :back , {class: "back-link"}%>
+          <%= link_to '戻る', reviews_path , {class: "back-link"}%>
       </p>
     <% end %>
     </div>

@@ -1,3 +1,4 @@
+<h3 class="users-h3">ユーザ一覧</h3>
 <% if !current_user %>
 <div class="users">
   <%= link_to "ログイン", top_main_path , {class: "top-link"}%>
@@ -5,7 +6,7 @@
 <% end %>
 <% @users.each do |e| %>
   <p class="users-p">
-    <%= e.uid %>
+    ユーザ：<strong class="users-uid"><%= e.uid %></strong>
     <%= link_to '削除', user_path(e), method: :delete, class: "users-link"%>
   </p>
 <% end %>
