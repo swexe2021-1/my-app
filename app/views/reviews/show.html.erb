@@ -1,17 +1,18 @@
 <div class="review-show">
-<p><strong class="review-show-pre">県：</strong><%= @review.prefecture %></p>
-<p><strong class="review-show-add">市：</strong><%= @review.address %></p>
-<p><strong class="review-show-dis">区町村：</strong><%= @review.district %></p>
-<p><strong class="review-show-cat">評価カテゴリー：</strong><%= @review.category %></p>
-<p><strong class="review-show-star">総合評価(1 ~ 5)：</strong><snap class="star star-show" >
+<div class="review-box">
+<p class="review-p" ><strong class="review-show-pre">県：</strong><%= @review.prefecture %></p>
+<p class="review-p" ><strong class="review-show-add">市：</strong><%= @review.address %></p>
+<p class="review-p" ><strong class="review-show-dis">区町村：</strong><%= @review.district %></p>
+<p class="review-p" ><strong class="review-show-cat">評価カテゴリー：</strong><%= @review.category %></p>
+<p class="review-p" ><strong class="review-show-star">総合評価(1 ~ 5)：</strong><snap class="star star-show" >
               <% if @review.star %>
                 <% for i in 1..@review.star do %>
                   ★
                 <% end %>
               <% end %>
             </snap></p>
-<p><strong class="review-show-des">詳細：</strong><%= @review.description %></p>
-
+<p class="review-p" ><strong class="review-show-des">詳細：</strong><%= @review.description %></p>
+</div>
 <script type="text/javascript">
     function initMap() {
 
@@ -54,5 +55,7 @@
     width: 80%;}
 </style>
 <div id="map"></div><br>
+<div class="back-puls">
 <%= link_to '戻る', :back, {class: "back-link"} %>
+</div>
 </div>

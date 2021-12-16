@@ -421,6 +421,25 @@ table th{
 //review-show
 .review-show{
     font-size: 25px;
+
+}
+
+.review-show p{
+    margin-left: 3.8em;
+    text-indent: -3.8em;
+}
+
+.review-box{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.review-p{
+    text-align: left;
+}
+
+.back-puls{
     text-align: center;
 }
 
@@ -429,34 +448,16 @@ table th{
     vertical-align: -10%;
 }
 
-.review-show-pre{
-    margin-right: 45px;
-    margin-left: 105px;
-}
+.review-show-pre, .review-show-add, .review-show-dis,
+.review-show-cat, .review-show-des{
+    margin-right: 20px;
 
-.review-show-add{
-    margin-right: 45px;
-    margin-left: 105px;
-}
-
-.review-show-dis{
-    margin-right: 45px;
-    margin-left: 79px;
-}
-
-.review-show-cat{
-    margin-right: 45px;
-    margin-left: 4px;
 }
 
 .review-show-star{
     margin-right: 25px;
 }
 
-.review-show-des{
-    margin-right: 45px;
-    margin-left: 105px;
-}
 
 //user
 .users-p{
